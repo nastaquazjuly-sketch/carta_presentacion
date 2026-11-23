@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+h1 { color: rgb(0, 26, 255); }
+h2 { color: rgb(12, 12, 12); }
+
+#card_body {
+    border: 4px dashed black;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: beige;
+}
+#card_body p {
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-size: x-large;
+}
+
+.columnas {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    min-height: 260px;
+}
+
+.izquierda, .derecha {
+    flex: 1;
+    border: 3px solid rgb(0, 26, 255);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    background-color: #fffaf0;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    font-family: Georgia, Cambria, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.izquierda h2 { color: rgb(0, 26, 255); }
+.derecha h2 { color: rgb(150, 20, 20); }
+.derecha { border-color: rgb(150, 20, 20); }
+
+.izquierda, .derecha,
+.izquierda h2, .derecha h2 { text-align: left; }
+
+.fila-foto {
+    display: flex;
+    margin: 0.75rem 0 1.25rem 0;
+}
+
+.izquierda-foto {
+    justify-content: flex-start;
+}
+
+.centro-foto {
+    justify-content: center;
+}
+
+.derecha-foto {
+    justify-content: flex-end;
+}
+
+#card_body img {
+    display: block;
+    flex: none;
+    width: 115px;
+    max-width: 115px;
+    height: 145px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 26, 255);
+    object-fit: cover;
+    object-position: top;
+}
+
+
+.fila-presentacion {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.carta-texto {
+    flex: 1;
+}
+
+.carta-texto h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.fila-presentacion .fila-foto {
+    margin: 0.5rem 0 0 0;
+    flex-shrink: 0;
+}
+
+
+.seccion-contacto {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #fffaf0;
+    border: 2px solid #d4cfc0;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.seccion-contacto h2 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    color: rgb(0, 26, 255);
+}
+
+.formulario-cv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.25rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 0.35rem;
+    font-family: Georgia, Cambria, 'Times New Roman', serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.campo input,
+.campo select {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #9ca3af;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    color: #111827;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: rgb(0, 26, 255);
+    box-shadow: 0 0 0 3px rgba(0, 26, 255, 0.15);
+}
+
+.btn-enviar {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(0, 26, 255);
+    color: #ffffff;
+    font-family: Georgia, Cambria, 'Times New Roman', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: rgb(0, 18, 190);
+}
+
+
+@media (max-width: 820px) {
+    #card_body {
+        padding: 1.15rem;
+    }
+
+    .columnas {
+        height: auto;
+        min-height: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.65rem;
+    }
+
+    #card_body p {
+        font-size: 1.05rem;
+    }
+
+    .fila-presentacion {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .carta-texto {
+        width: 100%;
+    }
+
+    .carta-texto h2 {
+        text-align: center;
+    }
+
+    .columnas {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .formulario-cv {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-contacto {
+        padding: 1rem;
+    }
+}

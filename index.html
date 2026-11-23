@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi presentación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="card_body">
+        <h1>Bienvenidos a mi portafolio</h1>
+
+        <div class="fila-presentacion">
+            <div class="carta-texto">
+                <h2>Carta de presentación</h2>
+                <p>San Lorenzo, 22 de noviembre de 2026</p>
+                <p>A quien corresponda:</p>
+                <p>Me presento: soy Yuleixi Nastacuaz, estudiante de Desarrollo de Software. Soy responsable, creativa y me gusta el trabajo en equipo. Agradezco su visita a mi portafolio.</p>
+                <p>Atentamente,<br>Yuleixi Nastacuaz</p>
+            </div>
+
+            <div class="fila-foto derecha-foto">
+                <img src="IMAGENES/perfil.jpg" alt="imagen de presentación">
+            </div>
+        </div>
+
+        <div class="columnas">
+            <div class="izquierda">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Responsabilidad</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Creativa</li>
+                    <li>Respetuosa</li>
+                </ul>
+            </div>
+            <div class="derecha">
+                <h2>Defectos personales</h2>
+                <ul>
+                    <li>Soy Enojona</li>
+                    <li>No todos me agradan</li>
+                    <li>Miro mal a las personas que no me agradan</li>
+                    <li>Me cae mal la gente hipócrita</li>
+                    <li>No me gusta trabajar con personas irresponsables</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="seccion-contacto">
+            <h2>Formulario de contacto</h2>
+            <form class="formulario-cv">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="etnia">Autoidentificación étnia</label>
+                    <select name="etnia" id="etnia">
+                        <option value="selecciona">selecciona</option>
+                        <option value="mestizo">mestizo</option>
+                        <option value="afroecuatoriano">afroecuatoriano</option>
+                        <option value="indígena">indígena</option>
+                        <option value="mulato">mulato</option>
+                        <option value="otros">otros</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+
+                <div class="campo">
+                    <label for="pais">País de residencia</label>
+                    <select name="pais" id="pais">
+                        <option value="Selecciona el pais">selecciona</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Perú">Perú</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
